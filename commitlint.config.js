@@ -4,6 +4,10 @@ module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     ...conventional.rules,
-    'type-enum': [2, always, [...conventional.rules['type-enum'], 'content']],
+    'type-enum': [
+      2,
+      'always',
+      [...conventional.rules['type-enum'][2], 'content'],
+    ],
   },
 }
